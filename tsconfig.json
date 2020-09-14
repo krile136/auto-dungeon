@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "esModuleInterop": true, // これ入れると import { PersistGate } from 'redux-persist/integration/react'; とかで警告出なくなる
+    "target": "esnext",
     "allowSyntheticDefaultImports": true,
     "jsx": "react-native",
     "lib": ["dom", "esnext"],
@@ -7,6 +10,8 @@
     "noEmit": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "strict": true
-  }
+    "strict": true,
+    "typeRoots": ["types", "node_modules/@types"]
+  },
+  "exclude": ["node_modules"]
 }
