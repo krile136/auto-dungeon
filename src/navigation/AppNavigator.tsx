@@ -11,6 +11,7 @@ import { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs/lib/ty
 // base関連のscreen
 import { baseList } from '../screens/base/baseList';
 import { memberList } from '../screens/base/memberList';
+import { shopList } from '../screens/town/shopList';
 
 // dungeon関連のscreen
 import { dungeonList } from '../screens/dungeon/dungeonList';
@@ -78,6 +79,27 @@ const dungeonStack = () => {
   );
 };
 
+const shopStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="shopList"
+        component={shopList}
+        options={{
+          title: '街',
+          headerStyle: {
+            backgroundColor: '#f4511e',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
+        }}
+      />
+    </Stack.Navigator>
+  );
+};
+
 export const AppNavigator = () => {
   return (
     <NavigationContainer>
@@ -101,6 +123,22 @@ export const AppNavigator = () => {
         <Tab.Screen
           name="ダンジョン"
           component={dungeonStack}
+          options={{
+            tabBarIcon: ({ color, size }: { color: string; size: string }) => (
+              <Image
+                source={dangeon}
+                style={{
+                  width: size,
+                  height: size,
+                  tintColor: color,
+                }}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="街"
+          component={shopStack}
           options={{
             tabBarIcon: ({ color, size }: { color: string; size: string }) => (
               <Image
