@@ -33,24 +33,6 @@ export const baseList: React.FC<Props> = ({ navigation, route }: Props) => {
         tileTitle="test"
         onPress={() => null}
       />
-      {/* <ListContents
-        contentImage={sword}
-        mainText="Equipment"
-        subText="装備"
-        onPress={() => null}
-      />
-      <ListContents
-        contentImage={status}
-        mainText="Status"
-        subText="ステータス"
-        onPress={() => navigation.navigate('memberList')}
-      />
-      <ListContents
-        contentImage={strategy}
-        mainText="Strategy"
-        subText="作戦"
-        onPress={() => null}
-      /> */}
     </SafeAreaView>
   );
 };
