@@ -1,25 +1,16 @@
 import React from 'react';
-import {
-  StyleSheet,
-  SafeAreaView,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-} from 'react-native';
+import { Text, StyleSheet, SafeAreaView } from 'react-native';
 import { RootStackParamList } from '../../types/navigation';
-// components
-import { ListContents } from '../../components/listContents';
-import { Card } from 'react-native-paper';
-import { scale } from 'react-native-size-matters';
 
 // types
 import { StackNavigationProp } from '@react-navigation/stack/lib/typescript/src/types';
 import { RouteProp } from '@react-navigation/native';
+
+// components
+import { DoubleTileContents } from '../../components/doubleTileContents';
+import { SingleTileContent } from '../../components/singleTileContent';
 // image
-import sword from '../../../assets/img/sword.png';
 import status from '../../../assets/img/status.png';
-import strategy from '../../../assets/img/strategy.png';
 
 type Props = {
   navigation: StackNavigationProp<RootStackParamList, 'baseList'>;
@@ -29,24 +20,19 @@ type Props = {
 export const baseList: React.FC<Props> = ({ navigation, route }: Props) => {
   return (
     <SafeAreaView style={styles.container}>
-      {/* <ListContents
-        contentImage={sword}
-        mainText="Equipment"
-        subText="装備"
+      <DoubleTileContents
+        leftTileImage={status}
+        leftTileTitle="キャラクター"
+        leftOnPress={() => null}
+        rightTileImage={status}
+        rightTileTitle="持ち物"
+        rightOnPress={() => null}
+      />
+      <SingleTileContent
+        tileImage={status}
+        tileTitle="test"
         onPress={() => null}
       />
-      <ListContents
-        contentImage={status}
-        mainText="Status"
-        subText="ステータス"
-        onPress={() => navigation.navigate('memberList')}
-      />
-      <ListContents
-        contentImage={strategy}
-        mainText="Strategy"
-        subText="作戦"
-        onPress={() => null}
-      /> */}
     </SafeAreaView>
   );
 };
