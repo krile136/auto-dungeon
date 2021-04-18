@@ -1,15 +1,9 @@
 import React from 'react';
-import {
-  StyleSheet,
-  SafeAreaView,
-  Text,
-  View,
-  TouchableOpacity,
-  Image,
-} from 'react-native';
+import { StyleSheet, SafeAreaView } from 'react-native';
 import { RootStackParamList } from '../../types/navigation';
+
 // components
-import { ListContents } from '../../components/listContents';
+import { DungeonListContents } from '../../components/dungeonListContents';
 // types
 import { StackNavigationProp } from '@react-navigation/stack/lib/typescript/src/types';
 import { RouteProp } from '@react-navigation/native';
@@ -17,6 +11,7 @@ import { RouteProp } from '@react-navigation/native';
 import sword from '../../../assets/img/sword.png';
 import status from '../../../assets/img/status.png';
 import strategy from '../../../assets/img/strategy.png';
+import stairs from '../../../assets/img/stairs.png';
 
 type Props = {
   navigation: StackNavigationProp<RootStackParamList, 'dungeonList'>;
@@ -26,16 +21,25 @@ type Props = {
 export const dungeonList: React.FC<Props> = ({ navigation, route }: Props) => {
   return (
     <SafeAreaView style={styles.container}>
-      <ListContents
-        contentImage={status}
-        mainText="Forest"
-        subText="森"
+      <DungeonListContents
+        dungeonImage={status}
+        dungeonName="迷いの森"
+        dungeonStairs="6階"
+        dungeonFlavorText="一度入ると出ることができないと言われる森"
         onPress={() => null}
       />
-      <ListContents
-        contentImage={strategy}
-        mainText="Cave"
-        subText="洞窟"
+      <DungeonListContents
+        dungeonImage={status}
+        dungeonName="竜の巣穴"
+        dungeonStairs="12階"
+        dungeonFlavorText="凶暴な竜が住むと言われる洞窟"
+        onPress={() => null}
+      />
+      <DungeonListContents
+        dungeonImage={status}
+        dungeonName="滅びの塔"
+        dungeonStairs="60階"
+        dungeonFlavorText="瓦礫で作られた塔"
         onPress={() => null}
       />
     </SafeAreaView>

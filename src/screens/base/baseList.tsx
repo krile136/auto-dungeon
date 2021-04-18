@@ -10,6 +10,9 @@ import {
 import { RootStackParamList } from '../../types/navigation';
 // components
 import { ListContents } from '../../components/listContents';
+import { Card } from 'react-native-paper';
+import { scale } from 'react-native-size-matters';
+
 // types
 import { StackNavigationProp } from '@react-navigation/stack/lib/typescript/src/types';
 import { RouteProp } from '@react-navigation/native';
@@ -26,7 +29,7 @@ type Props = {
 export const baseList: React.FC<Props> = ({ navigation, route }: Props) => {
   return (
     <SafeAreaView style={styles.container}>
-      <ListContents
+      {/* <ListContents
         contentImage={sword}
         mainText="Equipment"
         subText="装備"
@@ -43,7 +46,7 @@ export const baseList: React.FC<Props> = ({ navigation, route }: Props) => {
         mainText="Strategy"
         subText="作戦"
         onPress={() => null}
-      />
+      /> */}
     </SafeAreaView>
   );
 };
