@@ -55,6 +55,6 @@ export const shopList: React.FC<Props> = ({ navigation, route }: Props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#FEFFDE',
   },
 });

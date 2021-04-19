@@ -32,7 +32,7 @@ const baseStack = () => {
         options={{
           title: 'キャンプ',
           headerStyle: {
-            backgroundColor: '#f4511e',
+            backgroundColor: '#91C788',
           },
           headerTintColor: '#fff',
           headerTitleStyle: {
@@ -46,7 +46,7 @@ const baseStack = () => {
         options={{
           title: 'メンバー',
           headerStyle: {
-            backgroundColor: '#f4511e',
+            backgroundColor: '#91C788',
           },
           headerTintColor: '#fff',
           headerTitleStyle: {
@@ -67,7 +67,7 @@ const dungeonStack = () => {
         options={{
           title: 'ダンジョン',
           headerStyle: {
-            backgroundColor: '#f4511e',
+            backgroundColor: '#91C788',
           },
           headerTintColor: '#fff',
           headerTitleStyle: {
@@ -88,7 +88,7 @@ const shopStack = () => {
         options={{
           title: '街',
           headerStyle: {
-            backgroundColor: '#f4511e',
+            backgroundColor: '#91C788',
           },
           headerTintColor: '#fff',
           headerTitleStyle: {
